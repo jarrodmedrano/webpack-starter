@@ -13,16 +13,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(.js|.jsx)$/,
+        test: /\.(js|jsx)$/,
         use: ['babel-loader']
       },
       {
-        test: /\.(.js|.jsx)$/,
+        test: /\.(js|jsx)$/,
         use: ['eslint-loader']
       }
     ]
   },
   resolve: {
-    extensions: ['js','jsx']
+    extensions: ['.js','.jsx'],
+    modules: ["src","node_modules"]
   }
 };
